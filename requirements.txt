@@ -1,0 +1,5 @@
+thordata-sdk>=1.7.0
+python-dotenv
+pandas
+colorama
+requests
