@@ -102,9 +102,34 @@ This scraper uses **Thordata's Web Scraper API (Hybrid Mode)**:
 2.  **Auto-Polling**: The SDK (`run_task`) automatically polls for completion.
 3.  **Result Retrieval**: Downloads the clean JSON data once ready.
 
-This architecture ensures you **never get IP blocked** and don't need to maintain local headless browsers.
+This architecture uses Thordata's Web Scraper API and proxy infrastructure, so the example does not require local browser automation.
 
 ---
+
+## What This Example Does Not Collect
+
+This repository is an example client for authorized Thordata Web Scraper API requests. It does not include Instagram login cookies, private account access, or browser session data.
+
+The example does not grant rights to access, reuse, train on, or redistribute third-party content. Use it only for lawful and authorized data workflows.
+
+Never place API keys, cookies, personal information, or private data in source files, logs, README files, or commits.
+
+## Failure Behavior
+
+An API request may fail because of invalid credentials, unsupported parameters, rate limits, endpoint restrictions, or temporary service errors.
+
+When a request fails, treat the response as an error rather than valid Instagram data. Check the terminal output and returned API response for details. Exact error codes and limits depend on the account and endpoint.
+
+## For Coding Assistants
+
+When modifying or running this example:
+
+- Read `.env.example` and keep credentials in environment variables.
+- Check `src/config.py` before inventing scraper IDs or request parameters.
+- Follow the existing README examples and preserve the current request flow.
+- Never print or commit API keys, cookies, private URLs, or personal data.
+- Review returned profile, post, reel, or comment data before sharing it.
+- Treat returned Instagram data as third-party data subject to applicable terms and usage restrictions.
 
 ## 📄 License
 
